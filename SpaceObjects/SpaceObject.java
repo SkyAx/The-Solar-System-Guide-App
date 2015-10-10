@@ -5,7 +5,6 @@ import java.math.BigInteger;
 public abstract class SpaceObject {
 
     private String name;
-    private String type;
     private int countSatellite;
     private long weight;
     private int lengthOfCircle;
@@ -13,13 +12,18 @@ public abstract class SpaceObject {
     private double maxTemperature;
     private double gravity;
 
+    protected SpaceObject(String aName,  int aCountSatellite, long aWeight, long aArea, int aLengthOfCircle, double aMaxTemperature, double aGravity) {
+        this.name = aName;
+        this.countSatellite = aCountSatellite;
+        this.weight = aWeight;
+        this.area = aArea;
+        this.lengthOfCircle = aLengthOfCircle;
+        this.maxTemperature = aMaxTemperature;
+        this.gravity = aGravity;
+    }
 
     public String getName() {
         return name;
-    }
-
-    public String getType() {
-        return type;
     }
 
     public double getGravity() {
@@ -46,23 +50,9 @@ public abstract class SpaceObject {
         return countSatellite;
     }
 
-    protected abstract String getInformation();
+    public abstract String getType();
 
-    protected SpaceObject(String aName, String aType, int aCountSatellite, long aWeight, long aArea, int aLengthOfCircle, double aMaxTemperature, double aGravity) {
-            this.name = aName;
-            this.type = aType;
-            this.countSatellite = aCountSatellite;
-            this.weight = aWeight;
-            this.area = aArea;
-            this.lengthOfCircle = aLengthOfCircle;
-            this.maxTemperature = aMaxTemperature;
-            this.gravity = aGravity;
-
-    }
-
-    protected SpaceObject () {
-
-    }
+    public abstract String getInformation();
 
 }
 
