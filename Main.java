@@ -10,7 +10,7 @@ public final class Main {
     SolarSystem solarSystem = new SolarSystem();
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    //Ключевые строковые переменные, хранящие текст, участвующий в общение с пользователем
+    //Ключевые строковые переменные, хранящие текст, участвующие в общении с пользователем
 
     private static String name;
 
@@ -70,7 +70,7 @@ public final class Main {
         }
     }
 
-    final void getInfoOfSolarSystem(){
+    private void getInfoOfSolarSystem(){
 
         String instructions = "Для продолжения нажмите клавишу \"y\" , для выхода из программы нажмите \"n\".";
         System.out.println(instructions);
@@ -108,7 +108,7 @@ public final class Main {
         }
     }
 
-    final void getInfoOfSolarSystemObject() throws IOException{
+    private void getInfoOfSolarSystemObject() throws IOException{
 
         String instructions = "Введите имя объекта нашей Солнечной системы, для получения подробной информации о нем. Для выхода нажмите \"n\".";
         String name = "";
