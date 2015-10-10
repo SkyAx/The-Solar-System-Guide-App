@@ -1,18 +1,16 @@
 package SpaceObjects.Stars;
 
-import SpaceObjects.SpaceObject;
-
 import java.math.BigInteger;
 
-public final class Sun extends SpaceObject implements Star {
+public final class Sun extends Star{
 
-    public Sun(String name, String type, int countSatellite, long weight, long area, int lengthOfCircle, double maxTemperature, double gravity) {
-        super(name, type, countSatellite, weight, area, lengthOfCircle, maxTemperature, gravity);
+    public Sun(String name, int countSatellite, long weight, long area, int lengthOfCircle, double maxTemperature, double gravity) {
+        super(name, countSatellite, weight, area, lengthOfCircle, maxTemperature, gravity);
     }
 
     @Override
     public BigInteger getWeight() {
-        return super.getWeight().multiply(BigInteger.valueOf(1000000000l));
+        return super.getWeight().multiply(BigInteger.valueOf(1000000000));
     }
 
     @Override
