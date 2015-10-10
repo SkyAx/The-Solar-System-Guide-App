@@ -1,13 +1,11 @@
 package SpaceObjects.Planets;
 
-import SpaceObjects.SpaceObject;
-
 import java.math.BigInteger;
 
-public final class Earth extends SpaceObject implements Planet {
+public final class Earth extends Planet {
 
-    public Earth(String name, String type, int countSatellite, long weight, long area, int lengthOfCircle, double maxTemperature, double gravity) {
-        super(name, type, countSatellite, weight, area, lengthOfCircle, maxTemperature, gravity);
+    public Earth(String name, int countSatellite, long weight, long area, int lengthOfCircle, double maxTemperature, double gravity) {
+        super(name, countSatellite, weight, area, lengthOfCircle, maxTemperature, gravity);
     }
 
     @Override
@@ -15,6 +13,7 @@ public final class Earth extends SpaceObject implements Planet {
         return super.getWeight().multiply(BigInteger.valueOf(1000));
     }
 
+    @Override
     public String getInformation() {
         return "Тип : " + getType() + "\n" + "Имя планеты : " + getName() + " - третья планета от Солнца. Другие названия Земли - Terra, SOL 3."
                 + "\n" + "Количество спутников : " + getCountSatellite() + "\n" + "Вес планеты : " + getWeight() + " тонн."

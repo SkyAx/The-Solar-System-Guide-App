@@ -1,13 +1,11 @@
 package SpaceObjects.Planets;
 
-import SpaceObjects.SpaceObject;
-
 import java.math.BigInteger;
 
-public final class Uranus extends SpaceObject implements Planet{
+public final class Uranus extends Planet{
 
-    public Uranus(String name, String type, int countSatellite, long weight, long area, int lengthOfCircle, double maxTemperature, double gravity) {
-        super(name, type, countSatellite, weight, area, lengthOfCircle, maxTemperature, gravity);
+    public Uranus(String name, int countSatellite, long weight, long area, int lengthOfCircle, double maxTemperature, double gravity) {
+        super(name, countSatellite, weight, area, lengthOfCircle, maxTemperature, gravity);
     }
 
     @Override
